@@ -1,0 +1,57 @@
+Planejamento do banco de Dados
+Entidades
+
+Usuário(Padrão do laravel)
+    Propriedades:
+        - Nome
+        - E-mail
+        - Login
+        - Senha
+
+    Relacionamentos:
+    Usuário x Tarefa:
+        - Um usuário pode ter várias tarefas
+        - Uma tarefa é exclusiva de um usuário
+
+    Usuario x Categoria
+        - Um usuário pode ter várias categorias
+        - Cada categoria pertence a apenas um usuário
+
+
+Tarefa
+    Propriedades:
+        - id
+        - titulo
+        - data
+        - descrição
+        - prioridade_id
+        - usuario_id
+
+   Relacionamentos
+        Tarefa x Usuários:
+            Uma tarefa pertence a apenas um usuário
+
+        Tarefa x prioridade:
+            Uma tarefa Pertence a apenas uma prioridade
+
+        Tarefa x Categoria
+            Uma tarefa pode pertencer a apenas uma categoria
+
+Prioridade:
+    Propriedades:
+        - Id
+        - Nome
+
+    Relacionamento:
+        Tarefa x Prioridade
+            Uma tarefa pertence a apenas uma prioridade
+
+        Prioridade x Tarefa
+            Uma prioriodade pode pertencer a várias tarefas
+
+Categoria:
+
+    Propriedades:
+    - Id
+    - Nome
+    - Usuario_id
